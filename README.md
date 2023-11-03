@@ -8,8 +8,8 @@ Para rodar necessario estes comandos em sequência no terminal:
 
 Uma vez estando dentro da pasta
 
-´´´composer install´´´
+``composer install``
 
-´´´php artisan serve´´´
+``php artisan serve``
 
 Basta acessar localhost:8000
