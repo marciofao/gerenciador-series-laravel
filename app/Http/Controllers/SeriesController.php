@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class SeriesController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         $series = [
             "Servant",
@@ -17,7 +17,15 @@ class SeriesController extends Controller
 
        return view("series.index")->with("series", $series);
     }
-    public function create(Request $request){
+    public function create(){
         return view("series.create");
+    }
+    public function store(Request $request){
+        $nomeSerie = $request->input("nome");
+        if(\DB::insert("INSERT INTO series (nome) VALUES (?)", [$nomeSerie])){
+            return "OK";
+        }else{
+            "Erro";
+        };
     }
 }
