@@ -9,12 +9,7 @@ class SeriesController extends Controller
 {
     public function index()
     {
-        $series = [
-            "Servant",
-            "Raised by Wolves",
-            "Lost",
-            "Grey's Anatomy",
-        ];
+       $series = DB::select("SELECT nome FROM series");
 
        return view("series.index")->with("series", $series);
     }
