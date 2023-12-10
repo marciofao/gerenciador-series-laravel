@@ -4,6 +4,10 @@ Sistema em Laravel para gerência de séries
 ### Requisitos:
 php 8.1+, composer
 
+### Instalação:
+
+Criar arquivo vazio database.sqlite em /database/database.sqlite
+
 Para rodar necessario estes comandos em sequência no terminal:
 
 Uma vez estando dentro da pasta
@@ -13,6 +17,8 @@ Uma vez estando dentro da pasta
 ``copy .env.example .env``
 
 ``php artisan key:generate``
+
+``php artisan migrate`` - gerar estrutura do banco de dados
 
 ``php artisan serve``
 
