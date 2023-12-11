@@ -18,6 +18,13 @@ class SeriesController extends Controller
     {
         return view("series.create");
     }
+
+    public function edit(Request $id)
+    {
+        $serie = Serie::find($id);
+        return view("series.edit")->with("serie", $serie[0]);
+        ;
+    }
     public function store(Request $request)
     {
         $nomeSerie = $request->input("nome");
@@ -26,9 +33,18 @@ class SeriesController extends Controller
         $serie->save();
         return redirect("/series");
     }
-    public function destroy(Request $id){
+    public function destroy(Request $id)
+    {
         $serie = Serie::find($id);
         $serie->each->delete();
+        return redirect("/series");
+    }
+
+    public function update(Request $request)
+    {
+        $serie = Serie::find(intval($request->input("id")));
+        $serie->nome = $request->input("nome");
+        $serie->save();
         return redirect("/series");
     }
 }

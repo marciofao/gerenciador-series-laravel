@@ -6,7 +6,7 @@
             {{htmlentities($serie->nome)}}
             <div class="show-on-hover">
                 <small>
-                    <a href="/series/editar">Editar</a>
+                    <a href="/series/editar?id={{$serie->id}}">Editar</a>
                     <a href="javascript:del({{$serie->id}})">Excluir</a>
                 </small>
 
@@ -18,8 +18,6 @@
         function del(id){
             if(confirm('Tem certeza que deseja excluir a série?')){
                 window.location.href = `/series/excluir?id=${id}`
-            }else{
-                return false
             }
         }
         
