@@ -23,3 +23,7 @@ Uma vez estando dentro da pasta
 ``php artisan serve``
 
 Basta acessar localhost:8000
+
+### Desenvolvimento:
+
+Necessário rodar npm install para instalar as dependencias do laravel como Webpack/Mix
