@@ -5,16 +5,17 @@ Sistema em Laravel para gerência de séries
 php 8.1+, composer
 
 ### Instalação:
+Para rodar é necessario estes comandos em sequência no terminal:
+
+Do nivel da pasta do projeto
 
 Criar arquivo vazio database.sqlite em /database/database.sqlite
 
-Para rodar necessario estes comandos em sequência no terminal:
-
-Uma vez estando dentro da pasta
+``copy nul "database.sqlite"`` (windows) ou ``touch database/database.sqlite`` (linux)
 
 ``composer install``
 
-``copy .env.example .env``
+``copy .env.example .env ``  ou  ``cp .env.example .env``
 
 ``php artisan key:generate``
 
